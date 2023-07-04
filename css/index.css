@@ -1,0 +1,81 @@
+/* 样式 */
+.banner {
+    position: relative;
+    height: 550px;
+}
+
+.image-list .item {
+    opacity: 0;
+}
+
+.image-list .item.active {
+    opacity: 1;
+}
+
+.image-list img {
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    width: 1920px;
+    height: 550px;
+    filter: brightness(0.95);
+}
+
+.control button {
+    position: absolute;
+    top: 50%;
+    /* transform: translateY(-50%); */
+    margin-top: -25px;
+    border: none;
+    background-color: rgba(0 0 0 / 0.1);
+    width: 50px;
+    height: 50px;
+    border-radius: 10px;
+    color: #fff;
+    font-size: 30px;
+    opacity: 0;
+    transition: opacity 0.5s;
+}
+
+.control .next {
+    right: 100px;
+    transform: rotate(180deg);
+}
+
+.control .prev {
+    left: 100px;
+}
+
+.banner:hover button {
+    opacity: 1;
+}
+
+.indicator-list {
+    display: flex;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 40px;
+}
+
+.indicator-list .item {
+    margin: 0 6px;
+    width: 8px;
+    height: 8px;
+    background-color: #00000033;
+    border-radius: 50%;
+}
+
+.indicator-list .item.active {
+    background-color: #fff;
+}
+
+.indicator-list .item.active::after {
+    content: "";
+    display: block;
+    transform: translate(3px);
+    width: inherit;
+    height: inherit;
+    background-color: inherit;
+    border-radius: inherit;
+}
